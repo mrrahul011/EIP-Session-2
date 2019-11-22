@@ -85,9 +85,13 @@ Epoch 00020: LearningRateScheduler setting learning rate to 0.000424869.
 
 
 
-#Result of your model.evaluate (on test data)
+# Result of your model.evaluate (on test data)
 
 [0.017244721205625684, 0.9946]
 
 # Strategy taken to achieve the said results
+
+1. Added a 1x1 layer before the last bach normalisation and dropout layers. This will help in effectively extracting the required features.
+2. Used Global Average Pooling layer insted of flatten layer. This will help in effective ectraction of feature values.
+3.The total learnable parameter for the network is 14840 and non learnable parameter is 252. Total 14840 paramter with an validation accuracy of 99.46% after 20 epochs 
 
